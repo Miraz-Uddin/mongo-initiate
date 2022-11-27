@@ -1,4 +1,4 @@
-const { client } = require("./dbConfig");
+import client from "./index.js";
 
 async function insertOneOrManyDocs() {
   try {
@@ -7,7 +7,7 @@ async function insertOneOrManyDocs() {
     const db = client.db("college");
     const coll = db.collection("students");
     // insert code goes here
-    const docs = [{ name: "Halley", age: 20, roll: 1 }];
+    const docs = [{ name: "Riaz", age: 22, roll: 5 }];
     const result = await coll.insertMany(docs);
     // display the results of your operation
     console.log(result.insertedIds);
